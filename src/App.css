@@ -238,6 +238,6 @@ a:link {
 .bg-img {
   padding: 50px 0;
   background-image: url(https://images.unsplash.com/photo-1437419764061-2473afe69fc2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fHdlYnNpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60);
-  background-size: cover;
+  background-size: contain;
   /* background-attachment: fixed; */
 }

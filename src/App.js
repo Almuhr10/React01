@@ -52,7 +52,7 @@ function App() {
               courseImg={process.env.PUBLIC_URL + "/card3.jpg"}
               courseName="معسكر علم البيانات وتعلم الآلة"
               courseDescription="للتعرف على مفاهيم علم البيانات وكيفية تحليلها ونمذجتها واختيار الخوارزميات المناسبة وعرضها على شكل رسوم بيانية واضحة ومختصرة.."
-              instructorName="Nourah Alshehri"
+              instructorName="Nourah Alqahtani"
               courseDate="08/05/2021"
               avtImg={process.env.PUBLIC_URL + "/avt1.png"}
             />
