@@ -222,7 +222,19 @@ a:link {
   transform: translateX(-50%);
 }
 
-.dis-btn {
+.dis-btn-available {
+  border-radius: 0.375rem;
+  background-color: #d1a772;
+  color: white;
+  padding: 0 3.5rem;
+  height: 2rem;
+  position: relative;
+  top: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dis-btn-closed {
   pointer-events: none;
   border-radius: 0.375rem;
   background-color: gray;
@@ -236,8 +248,83 @@ a:link {
 }
 
 .bg-img {
-  padding: 50px 0;
-  background-image: url(https://images.unsplash.com/photo-1437419764061-2473afe69fc2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fHdlYnNpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60);
-  background-size: contain;
-  /* background-attachment: fixed; */
+  padding: 120px 0;
+  background-image: url(../public/4.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* .search-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.search-input input {
+  background-color: #010101;
+  width: 600px;
+} */
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+  padding-bottom: 90px;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #d1a772;
+  border-right: none;
+  padding: 15px;
+  height: 40px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: #d1a772;
+}
+
+.searchButton {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #d1a772;
+  background: #d1a772;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* @media (min-width: 700px) {
+  .cards {
+    width: fit-content;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+} */
+
+.textDesc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }

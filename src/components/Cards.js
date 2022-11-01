@@ -12,28 +12,13 @@ import {
 } from "@chakra-ui/react";
 
 export default function BlogPostWithImage(props) {
-  function isOpen(status) {
+  // To check if the course date expired or still available
+  function isOpen() {
     let today = new Date().toLocaleDateString();
     if (props.courseDate >= today) {
-      return (
-        <Box
-          as="button"
-          borderRadius="md"
-          // bg="tomato"
-          bg="#d1a772"
-          color="white"
-          px={14}
-          h={8}
-          pos="relative"
-          top={3}
-          left="50%"
-          transform="translateX(-50%)"
-        >
-          التسجيل متاح
-        </Box>
-      );
+      return <button className="dis-btn-available">التسجيل متاح</button>;
     } else {
-      return <button className="dis-btn">التسجيل مغلق</button>;
+      return <button className="dis-btn-closed">التسجيل مغلق</button>;
     }
   }
 
@@ -64,19 +49,11 @@ export default function BlogPostWithImage(props) {
           />
         </Box>
         <Stack>
-          <Text textAlign={"right"} letterSpacing={1.1} fontSize={"2xl"}>
+          <Text textAlign={"left"} letterSpacing={1.1} fontSize={"2xl"}>
             {props.courseName}
           </Text>
-          <Text textAlign={"right"} color={"gray"}>
-            {/* <Text
-            textAlign={"right"}
-            color={"gray"}
-            whiteSpace="nowrap"
-            overflow={"hidden"}
-            textOverflow="ellipsis"
-          > */}
-            {props.courseDescription}
-          </Text>
+          {/* <Text textAlign={"right"} color={"gray"}> */}
+          <Text className="textDesc">{props.courseDescription}</Text>
           <Text textAlign={"left"} color={"gray.500"}>
             {props.courseDate}
           </Text>
