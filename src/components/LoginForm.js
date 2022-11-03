@@ -1,13 +1,37 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function LoginForm({ login, error }) {
   let navigate = useNavigate();
   function loginNavigate() {
+    /* const adminUser = {
+      name: "Abdulkarim",
+      password: "123",
+    }; */
+
+    // Since I still not add logout button on the homepage I don't neet to get and check now
+    // Once I add logout there I can add callback function to check and localStorage.clear() and window.location.reload()
+
+    // const getName = localStorage.getItem("namelData");
+    // const getPassword = localStorage.getItem("passwordData");
+
     if (details.name <= 0 || details.password <= 0) {
       alert("All fields are required!");
-    } else navigate("/");
+    } else if (details.name === "Abdulkarim" && details.password === "12345") {
+      localStorage.setItem("nameData", "Abdulkarim");
+      localStorage.setItem("passwordData", "12345");
+      navigate("/data");
+      axios.post(url, { details }).then((res) => {
+        console.log(res);
+      });
+    } else {
+      alert("Do not match!!");
+    }
   }
+
+  const url = "https://636257767521369cd06b088f.mockapi.io/FetchAPi";
+
   const [details, setDetails] = useState({ name: "", password: "" });
   const submitHandler = (e) => {
     e.preventDefault();

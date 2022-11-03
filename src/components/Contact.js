@@ -3,10 +3,10 @@ import React from "react";
 function Contact() {
   return (
     <>
-      <div class="all-page-title page-breadcrumb">
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-12">
+      <div className="all-page-title page-breadcrumb">
+        <div className="container text-center">
+          <div className="row">
+            <div className="col-lg-12">
               <h1>Contact</h1>
             </div>
           </div>

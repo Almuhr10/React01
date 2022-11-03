@@ -1,21 +1,20 @@
 import React from "react";
 
 function About() {
-  console.log("Hello");
   return (
     <>
-      <div class="about-section-box">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
+      <div className="about-section-box">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-md-6 col-sm-12">
               <img
                 src={process.env.PUBLIC_URL + "/about-img.jpg"}
                 alt=""
-                class="img-fluid"
+                className="img-fluid"
               />
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
-              <div class="inner-column">
+            <div className="col-lg-6 col-md-6 col-sm-12 text-center">
+              <div className="inner-column">
                 <h1>
                   Welcome To <span>Tuwaiq Academy</span>
                 </h1>

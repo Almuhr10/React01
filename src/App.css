@@ -636,3 +636,37 @@ i span {
   font-family: "Arbutus Slab", serif;
   padding: 0px;
 }
+/*------------------------------------------------------------------
+    API Style
+-------------------------------------------------------------------*/
+.Cards {
+  padding: 40px calc((100% - (255px * 3)) / 3);
+  background-color: darkslategrey;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  height: 350px;
+  margin: 20px;
+  text-align: center;
+  font-family: arial;
+  overflow: auto;
+  margin-top: 7%;
+}
+
+.imgRes {
+  width: 280px;
+  max-height: 60%;
+}
+.caption {
+  font-size: 20px;
+  position: relative;
+  /* height: 40%; */
+  padding-top: 50px;
+}
