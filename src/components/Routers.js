@@ -6,6 +6,7 @@ import LoginForm from "./LoginForm";
 import Nav from "./Nav";
 import Contact from "./Contact";
 import GetMethodAPI from "./GetMethodAPI";
+import Details from "./Details";
 
 function Routers() {
   return (
@@ -17,6 +18,7 @@ function Routers() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/data" element={<GetMethodAPI />} />
+        <Route path="/details" element={<Details />} />
       </Routes>
       <Footer />
     </>

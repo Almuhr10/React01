@@ -640,7 +640,7 @@ i span {
     API Style
 -------------------------------------------------------------------*/
 .Cards {
-  padding: 40px calc((100% - (255px * 3)) / 3);
+  padding: 40px calc((100% - (255px * 5)) / 3);
   background-color: darkslategrey;
   display: flex;
   flex-wrap: wrap;
@@ -650,9 +650,12 @@ i span {
 }
 
 .card {
+  border-radius: 60px;
+  background-color: #0c3b3b;
+  /* background-color: darkslategrey; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
-  height: 350px;
+  height: 300px;
   margin: 20px;
   text-align: center;
   font-family: arial;
@@ -661,12 +664,22 @@ i span {
 }
 
 .imgRes {
-  width: 280px;
-  max-height: 60%;
+  width: 300px;
+  max-height: 40%;
+  object-fit: cover;
 }
 .caption {
-  font-size: 20px;
+  color: white;
+  font-size: 22px;
   position: relative;
   /* height: 40%; */
   padding-top: 50px;
+}
+.caption a {
+  color: white;
+}
+button.btn.btn-success {
+  margin-top: 20px;
+  font-size: 14px;
+  border-radius: 20px;
 }
