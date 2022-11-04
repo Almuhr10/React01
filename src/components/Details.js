@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 function Details() {
-  const cId = useParams();
+  const params = useParams();
   const baseURL = "https://restcountries.com/v3.1/subregion/asia";
   const [id, setId] = useState("");
   const [APIData, setAPIData] = useState([]);
@@ -12,9 +12,8 @@ function Details() {
     axios.get(baseURL).then((res) => {
       setAPIData(res.data);
       setId(localStorage.getItem("id"));
-      console.log("params is ", id);
     });
-  }, [cId]);
+  }, [params]);
 
   //   const updateData = () => {
   axios
