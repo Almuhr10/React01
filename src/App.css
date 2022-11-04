@@ -683,3 +683,17 @@ button.btn.btn-success {
   font-size: 14px;
   border-radius: 20px;
 }
+
+.country-info {
+  background-color: #a8a8a8;
+  font-size: 25px;
+  padding: 255px 0;
+}
+.imgCountry {
+  border: 2px solid;
+  width: 200px;
+  height: 200px;
+  display: inline;
+  margin-bottom: 30px;
+  padding: 10px;
+}

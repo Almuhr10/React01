@@ -18,7 +18,7 @@ function Routers() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/data" element={<GetMethodAPI />} />
-        <Route path="/details" element={<Details />} />
+        <Route path="/details/:cId" element={<Details />} />
       </Routes>
       <Footer />
     </>

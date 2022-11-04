@@ -61,6 +61,11 @@ function Nav() {
                   Login
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/data">
+                  Api Data
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

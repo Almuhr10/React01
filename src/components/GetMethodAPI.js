@@ -21,15 +21,8 @@ function GetMethodAPI() {
           <img className="imgRes" src={e.flags.svg} alt="..." />
           <div className="caption">
             <h5>{e.name.common}</h5>
-            <Link to="/details">
-              <button
-                className="btn btn-success"
-                onClick={() => {
-                  localStorage.setItem("id", e.ccn3);
-                }}
-              >
-                More details
-              </button>
+            <Link to={`/details/${e.ccn3}`}>
+              <button className="btn btn-success">More details</button>
             </Link>
           </div>
         </div>

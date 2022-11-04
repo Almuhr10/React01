@@ -1,38 +1,49 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function Details() {
-  const params = useParams();
-  const baseURL = "https://restcountries.com/v3.1/subregion/asia";
-  const [id, setId] = useState("");
+  const { cId } = useParams();
+  //   console.log("This is params ", cId);
+  const baseURL = `https://restcountries.com/v3.1/alpha/${cId}`;
   const [APIData, setAPIData] = useState([]);
 
   useEffect(() => {
     axios.get(baseURL).then((res) => {
       setAPIData(res.data);
-      setId(localStorage.getItem("id"));
     });
-  }, [params]);
+  }, []);
 
-  //   const updateData = () => {
   axios
     .get(baseURL)
     .then((res) => {
-      console.log(id);
+      //   console.log(res.data);
     })
     .catch((err) => {
       console.log(err);
     });
-  //   };
 
   return (
     <div>
       {APIData.map((data, index) => {
         return (
           <div key={index}>
-            <p>Population is : {data.population}</p>
-            {/* <p>LName: {data.lName}</p> */}
+            <ul className="country-info">
+              <h1> {data.name.common} </h1>
+              <br />
+              <img className="imgCountry" src={data.coatOfArms.png} alt="..." />
+              <li>The Capital City : {data.capital}</li>
+              <li>Population : {data.population.toLocaleString("en-US")}</li>
+              <li>Start of Week : {data.startOfWeek.toUpperCase()}</li>
+              <li>Sub Region : {data.subregion}</li>
+              <li>Time Zone : {data.timezones}</li>
+              <li>Car Side : {data.car.side}</li>
+              {/* <li>Borders : {data.borders.join(" , ")}</li> */}
+              <br />
+              <Link to="/data">
+                <button className="btn btn-success"> Back to coutnries </button>
+              </Link>
+            </ul>
           </div>
         );
       })}
