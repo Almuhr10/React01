@@ -9,19 +9,15 @@ function Details() {
   const [APIData, setAPIData] = useState([]);
 
   useEffect(() => {
-    axios.get(baseURL).then((res) => {
-      setAPIData(res.data);
-    });
-  }, []);
-
-  axios
-    .get(baseURL)
-    .then((res) => {
-      //   console.log(res.data);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+    axios
+      .get(baseURL)
+      .then((res) => {
+        setAPIData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [baseURL]);
 
   return (
     <div>
